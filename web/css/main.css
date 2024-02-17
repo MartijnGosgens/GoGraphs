@@ -1,0 +1,35 @@
+div.btn-group {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+  svg circle.empty {
+    fill: #EED5AE;
+    stroke: gray;
+  }
+  
+  svg circle.black {
+    fill: black;
+    stroke: gray;
+  }
+
+  svg circle.changed {
+    stroke: red !important;
+  }
+
+  svg circle.white {
+    fill: white;
+    stroke: gray;
+  }
+
+  p, h1 {
+    text-align: center;
+  }
+
+
+
+  /* Add a color to the active/current link */
+  /* .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  } */

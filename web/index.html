@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go on Graphs</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="/eel.js"></script> 
+    <!-- Need to download these files and refer to them locally -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body style="background-color: #EED5AE;">
+      
+	<div class="container">
+        <div class="row">
+            <h1 class="col-12">Go on Graphs</h1>
+        </div>
+        <div class="row">
+            <!--<button class="col-4 btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="button-grid-5-5">Start game on 5x5 grid</button>-->
+            <label for="graphtype-dropdown" class="col-1">Graph type</label>
+            <select class="form-select col-3" id="graphtype-dropdown">
+              <option value="GRID 5 3">5x3 Grid</option>
+              <option value="GRID 4 4">4x4 Grid</option>
+              <option value="GRID 5 5">5x5 Grid</option>
+              <option value="GRID 7 7">7x7 Grid</option>
+              <option value="GRID 9 9">9x9 Grid</option>
+              <option value="USA">USA Map</option>
+              <option value="KARATE">Karate Network</option>
+              <option value="COMMUNITIES">Random communities</option>
+              <option value="VORONOI CELLS">Random Voronoi Cells</option>
+              <option value="VORONOI RIDGES">Random Voronoi Ridges</option>
+              <option value="REGULAR 20 3">Random Regular Graph</option>
+              <option value="GEOMETRIC 20 4">Random Geometric Graph</option>
+              <option value="DODECAHEDRAL">Dodecahedral</option>
+            </select>
+            <label for="black-dropdown" class="col-1">Black player</label>
+            <select class="form-select col-2" id="black-dropdown">
+              <option value="you">you (GUI)</option>
+              <option value="MiniMax 3">MiniMax 3</option>
+              <option value="MiniMax 4">MiniMax 4</option>
+              <option value="AlphaBeta 3">AlphaBeta 3</option>
+              <option value="AlphaBeta 4">AlphaBeta 4</option>
+              <option value="AlphaBeta 5">AlphaBeta 5</option>
+            </select>
+            <label for="white-dropdown" class="col-1">White player</label>
+            <select class="form-select col-2" id="white-dropdown">
+              <option value="you">you (GUI)</option>
+              <option value="MiniMax 3">MiniMax 3</option>
+              <option value="MiniMax 4">MiniMax 4</option>
+              <option value="AlphaBeta 3">AlphaBeta 3</option>
+              <option value="AlphaBeta 4">AlphaBeta 4</option>
+              <option value="AlphaBeta 5">AlphaBeta 5</option>
+            </select>
+            <button class="col-1 btn btn-primary" id="button-start">Start</button>
+            <button class="col-1 btn btn-primary" id="button-pass">Pass</button>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"><p id="status-label">Select a game to start!</p></div>
+            <div class="col-4"><p id="score-label"></p></div>
+        </div>
+		<div id="container" class="row"></div>
+	</div>
+</body>
+<script src="js/main.js"></script>
+</html>
